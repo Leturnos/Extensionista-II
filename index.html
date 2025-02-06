@@ -7,13 +7,13 @@
     <title>PetCenter</title>
     <link rel="stylesheet" href="./src/styles/header.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+    <link rel="stylesheet" href="/src/styles/header.css">
 </head>
 
 <body>
     <header>
         <nav class="header__container">
-            <button class="sidebar">
+            <button class="sidebar" id="sidebar-toggle">
                 <i class="fa-solid fa-bars"></i>
             </button>
 
@@ -41,7 +41,17 @@
             </div>
         </nav>
     </header>
-    <script type="text/javascript" src="./script.js"></script>
+
+    <div class="overlay" id="overlay"></div>
+    <div class="sidebar-menu" id="sidebar-menu">
+        <ul>
+            <li><a href="#">Menu 1</a></li>
+            <li><a href="#">Menu 2</a></li>
+            <li><a href="#">Menu 3</a></li>
+        </ul>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 
 </html>

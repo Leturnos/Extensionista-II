@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PetCenter</title>
     <link rel="stylesheet" href="./src/styles/header.css">
+    <link rel="stylesheet" href="./src/styles/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="/src/styles/header.css">
+
 </head>
 
 <body>
@@ -16,6 +17,14 @@
             <button class="sidebar" id="sidebar-toggle">
                 <i class="fa-solid fa-bars"></i>
             </button>
+            <div class="overlay" id="overlay"></div>
+            <div class="sidebar-menu" id="sidebar-menu">
+                <ul>
+                    <li><a href="#">Menu 1</a></li>
+                    <li><a href="#">Menu 2</a></li>
+                    <li><a href="#">Menu 3</a></li>
+                </ul>
+            </div>
 
             <a href="index.html">
                 <h1 class="title">PETCENTER</h1>
@@ -41,15 +50,34 @@
             </div>
         </nav>
     </header>
+    <main>
+        <div class="main_container">
+            <h1 class="news-title">Notícias do mundo pet</h1>
+            <div class="carousel-container">
+                <div class="carousel" id="news-carousel">
+                    <a href="#" class="card">
+                        <img src="./src/assets/news/animal1.jpg" alt="Notícia sobre cães">
+                        <span>Cães de resgate salvam vidas</span>
+                    </a>
 
-    <div class="overlay" id="overlay"></div>
-    <div class="sidebar-menu" id="sidebar-menu">
-        <ul>
-            <li><a href="#">Menu 1</a></li>
-            <li><a href="#">Menu 2</a></li>
-            <li><a href="#">Menu 3</a></li>
-        </ul>
-    </div>
+                    <a href="#" class="card">
+                        <img src="./src/assets/news/animal2.jpg" alt="Notícia sobre gatos">
+                        <span>Curiosidades sobre o comportamento dos gatos</span>
+                    </a>
+
+                    <a href="#" class="card">
+                        <img src="./src/assets/news/animal3.jpg" alt="Notícia sobre pássaros">
+                        <span>Espécies raras de pássaros encontradas</span>
+                    </a>
+                </div>
+            </div>
+            <div class="carousel-indicators">
+                <span class="dot active" data-index="0"></span>
+                <span class="dot" data-index="1"></span>
+                <span class="dot" data-index="2"></span>
+            </div>
+        </div>
+    </main>
 
     <section id="text">
         <div class="grid-layout">

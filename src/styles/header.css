@@ -120,3 +120,30 @@ body {
 .overlay.active {
     display: block;
 }
+
+#text {
+   padding: 150px 0;
+
+}
+
+.content-text {
+    width: 100%;
+    margin-bottom: 24px;
+}
+
+.grid-layout {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 20px; 
+}
+
+.container-text {
+    flex: 1 1 300px; 
+    padding: 10px;
+    max-width: 45%; 
+    box-sizing: border-box; 
+    border: #242424 1px solid;
+    background-color: #D9D9D9;
+
+}

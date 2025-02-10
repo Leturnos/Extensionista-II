@@ -1,0 +1,17 @@
+:root{
+    /* font */
+    --font-segoe-ui: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    /* colors */
+    --white-color: #fff;
+    --header-bg-color: #c0c0c0;
+    --search-bg-color: #242424;
+    --sidebar-bg-color: #f0f0f0;
+    --sidebar-text-color: #333;
+    --card-text-color: #000;
+    --card-bg-color: #c2c2c2;
+    --dot-bg-color: #ccc;
+    --dot-active-color: #555;
+    --overlay-bg-color: rgba(0, 0, 0, 0.5);
+    --container-border-color: #242424;
+}

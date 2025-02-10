@@ -5,19 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PetCenter</title>
+
+    <link rel="stylesheet" href="./src/styles/reset.css">
+    <link rel="stylesheet" href="./src/styles/vars.css">
+    <link rel="stylesheet" href="./src/styles/body.css">
     <link rel="stylesheet" href="./src/styles/header.css">
     <link rel="stylesheet" href="./src/styles/main.css">
+   
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 </head>
 
 <body>
-    <header>
-        <nav class="header__container">
-            <button class="sidebar" id="sidebar-toggle">
-                <i class="fa-solid fa-bars"></i>
-            </button>
-            <div class="overlay" id="overlay"></div>
+    <div class="overlay" id="overlay"></div>
             <div class="sidebar-menu" id="sidebar-menu">
                 <ul>
                     <li><a href="#">Menu 1</a></li>
@@ -25,13 +25,19 @@
                     <li><a href="#">Menu 3</a></li>
                 </ul>
             </div>
+    <header>
+        <nav class="header__container">
+            <button class="sidebar" id="sidebar-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            
 
             <a href="index.html">
                 <h1 class="title">PETCENTER</h1>
             </a>
 
             <div class="welcome-message">
-                <h2>Seja <span class="strong-text">BEM VINDO</span> Ao seu canal pet</h2>
+                <h2><span class="strong-text">BEM VINDO</span><br>Ao seu canal pet</h2>
             </div>
 
             <div class="header__search">

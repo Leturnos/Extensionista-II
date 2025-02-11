@@ -34,3 +34,4 @@ dots.forEach(dot => {
         goToSlide(index);
     });
 });
+

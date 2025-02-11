@@ -20,6 +20,18 @@
 .title {
     margin-left: 1.5vw;
     font-weight: 700;
+    font-size: 30px;
+    color: #000000;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    letter-spacing: 0.5px;
+    transition: all 0.5s ease;
+}
+
+.title:hover {
+    color: #da5c82;
+    /* Cor que muda ao passar o mouse */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+    /* Sombra mais forte ao passar o mouse */
 }
 
 .welcome-message {
@@ -33,7 +45,7 @@
 
 .welcome-message h2 {
     margin: 0;
-    line-height: 1.1; 
+    line-height: 1.1;
 }
 
 .welcome-message .strong-text {
@@ -66,11 +78,6 @@
     margin-right: 8px;
 }
 
-.locality {
-    margin-left: 2vw;
-    display: flex;
-    align-items: center;
-}
 
 .sidebar-menu {
     position: fixed;
@@ -78,11 +85,36 @@
     left: 0;
     height: 100%;
     width: 20vw;
-    background-color: rgba(192, 192, 192, 0.8); /* var(--sidebar-bg-color); */
+    background-color: rgba(255, 254, 254, 0.8);
+    /* var(--sidebar-bg-color); */
     transform: translateX(-100%);
     transition: transform 0.3s ease-in-out;
     z-index: 1000;
     padding: 20px;
+}
+
+.sidebar {
+    position: absolute;
+    top: 15px;
+    left: 0px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 2rem;
+    color: #333;
+    padding: 10px;
+    border-radius: 8px;
+    transition: background 0.3s ease, transform 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+}
+
+.sidebar:hover {
+    background: rgba(0, 0, 0, 0.1);
+    transform: scale(1.1);
 }
 
 .sidebar-menu.open {
@@ -90,19 +122,32 @@
 }
 
 .sidebar-menu ul {
-    margin-top: 60px; 
+    margin-top: 60px;
     list-style: none;
     padding: 0;
 }
 
 .sidebar-menu li {
     margin-bottom: 10px;
-    font-weight: 900;  
+    font-weight: 900;
 }
 
 .sidebar-menu a {
     text-decoration: none;
     color: var(--sidebar-text-color);
+}
+
+.sidebar-menu ul li a {
+    color: rgb(179, 52, 52);
+    text-decoration: none;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar-menu ul li a i {
+    margin-right: 10px;
+    font-size: 1.5rem;
 }
 
 .overlay {
@@ -111,7 +156,6 @@
     left: 0;
     width: 100%;
     height: 100%;
-    /* background-color: rgba(0, 0, 0, 0.5); */
     z-index: 999;
     display: none;
 }

@@ -80,62 +80,61 @@
     background-color: var(--dot-active-color);
 }
 
-.overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--overlay-bg-color);
-    z-index: 999;
-    display: none;
-}
-
-.overlay.active {
-    display: block;
-}
-
-#text {
-    padding: 150px 0;
-
-}
-
-.content-text {
-    width: 100%;
-    margin-bottom: 24px;
-}
-
-.grid-layout {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-.container-text {
-    flex: 1 1 280px; /* Redução do tamanho mínimo */
-    max-width: 90%; /* Evita que fique grande demais em telas menores */
-    padding: 10px;
-    box-sizing: border-box;
-    border: var(--container-border-color) 1px solid;
-    background-color: #D9D9D9;
-}
-
 .animal-image-container {
-    width: 200px;
-    height: 200px;
+    display: flex;
+    margin: 1vh 2vw;
+    justify-content: center;
+    gap: 4vw;
+    align-items: center;
+}
+
+.fish-img {
+    width: 30vw;
+    height: 20vh;
     border-radius: 50%;
     overflow: hidden;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    object-fit: cover;
     background-color: rgba(192, 192, 192, 0.8);
 }
 
-.animal-image-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.container-text {
+    position: relative;
+    flex: 1 1 140px;
+    max-width: 90%;
+    padding: 1.5vw; 
+    box-sizing: border-box;
+    border: 0.2vw solid var(--container-border-color);
+    background-color: #D9D9D9;
+    border-radius: 2vw; 
+}
+
+/* parte de fora da seta */
+.container-text::before {
+    content: "";
+    position: absolute;
+    left: -3.7vw;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 1.8vw solid transparent;
+    border-bottom: 1.8vw solid transparent;
+    border-right: 3.6vw solid var(--container-border-color); 
+}
+
+/* parte de dentro da seta */
+.container-text::after {
+    content: "";
+    position: absolute;
+    left: -3vw; 
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 1.6vw solid transparent;
+    border-bottom: 1.6vw solid transparent;
+    border-right: 3.2vw solid #D9D9D9;
 }
 
 /* Ajuste para telas menores */

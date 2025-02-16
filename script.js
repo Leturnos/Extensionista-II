@@ -35,3 +35,33 @@ dots.forEach(dot => {
     });
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    const portfolioItems = document.querySelectorAll(".portfolio-item");
+    const modal = document.querySelector(".modal");
+    const closeModalButton = document.querySelector(".close");
+
+    portfolioItems.forEach((item) => {
+        item.addEventListener("click", function () {
+            // Exibir o modal
+            modal.style.display = "flex";
+
+            // Adicionar conteúdo específico ao modal com base no item clicado
+            const title = item.querySelector("h3").textContent;
+            const description = item.querySelector("p").textContent;
+            modal.querySelector(".modal-title").textContent = title;
+            modal.querySelector(".modal-description").textContent = description;
+        });
+    });
+
+    // Fechar o modal quando clicar no X
+    closeModalButton.addEventListener("click", function () {
+        modal.style.display = "none";
+    });
+
+    // Fechar o modal quando clicar fora do conteúdo
+    window.addEventListener("click", function (e) {
+        if (e.target === modal) {
+            modal.style.display = "none";
+        }
+    });
+});

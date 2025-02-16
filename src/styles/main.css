@@ -83,11 +83,11 @@
 .container-text {
     position: relative;
     flex: 1 1 140px;
-    padding: 1.5vw; 
+    padding: 1.5vw;
     box-sizing: border-box;
     border: 0.2vw solid var(--container-border-color);
     background-color: #D9D9D9;
-    border-radius: 2vw; 
+    border-radius: 2vw;
     text-align: justify;
 }
 
@@ -99,62 +99,77 @@
 .container-text::before {
     content: "";
     position: absolute;
-    right: -3.7vw; 
-    left: auto; 
+    right: -3.7vw;
+    left: auto;
     top: 50%;
     transform: translateY(-50%);
     width: 0;
     height: 0;
     border-top: 1.8vw solid transparent;
     border-bottom: 1.8vw solid transparent;
-    border-left: 3.6vw solid var(--container-border-color); 
+    border-left: 3.6vw solid var(--container-border-color);
 }
 
 /* parte de dentro da seta */
 .container-text::after {
     content: "";
     position: absolute;
-    right: -3vw; 
-    left: auto; 
+    right: -3vw;
+    left: auto;
     top: 50%;
     transform: translateY(-50%);
     width: 0;
     height: 0;
     border-top: 1.6vw solid transparent;
     border-bottom: 1.6vw solid transparent;
-    border-left: 3.2vw solid #D9D9D9; 
+    border-left: 3.2vw solid #D9D9D9;
 }
 
 
+/* Estilo */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
 #portfolio {
     padding: 20px;
-    background-color: #f9f9f9;
 }
 
 .portfolio-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    /* Centralizar os cards */
     gap: 20px;
 }
 
 .portfolio-item {
-    flex: 1 1 100%; /* Mobile-first: 100% width */
+    flex: 1 1 calc(33.333% - 40px);
+    /* Ajustar o tamanho dos cards */
     box-sizing: border-box;
     background-color: #fff;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
     text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 20px;
+    /* Alterar se quiser mudar o espaçamento dos cards */
 }
 
 .portfolio-item img {
     max-width: 100%;
-    height: auto;
+    height: 275px;
+    /* Ajustar o tamanho da imagem, mas ainda nao sei qual tamanho fica melhor*/
+    object-fit: cover;
+    /* é pra img cobrir todo o card */
     border-radius: 5px;
-    width: 300px; /* Define a largura padrão */
-    height: 200px; /* Define a altura padrão */
-    object-fit: cover; /* Garante que a imagem se ajuste ao contêiner */
 }
 
 .portfolio-item h3 {
@@ -167,25 +182,52 @@
     color: #666;
 }
 
+/* Estilo para o modal, a mini tela que abre quando clica no card */
+.modal {
+    display: none;
+    /* Ela começa escondido */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    justify-content: center;
+    align-items: center;
+}
 
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    width: 50%;
+    max-width: 600px;
+    text-align: center;
+    position: relative;
+}
 
-/* Ajuste para telas menores */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+    cursor: pointer;
+}
+
+/* Responsividade do Luis*/
+@media (max-width: 900px) {
+    .portfolio-item {
+        flex: 1 1 calc(50% - 40px);
+        /* Ajusta para dois cards por linha */
+    }
+}
+
 @media (max-width: 600px) {
-    .container-text {
-        max-width: 100%;
+    .portfolio-item {
         flex: 1 1 100%;
-    }
-}
-
-/* Media queries for responsiveness */
-@media (min-width: 600px) {
-    .portfolio-item {
-        flex: 1 1 calc(50% - 40px); /* 2 items per row */
-    }
-}
-
-@media (min-width: 900px) {
-    .portfolio-item {
-        flex: 1 1 calc(33.333% - 40px); /* 3 items per row */
+        /* Ajusta para um card por linha */
     }
 }

@@ -13,7 +13,7 @@ overlay.addEventListener('click', () => {
     overlay.classList.remove('active');
 });
 
-// carousel-dots 
+/* carousel-dots 
 const carousel = document.getElementById("news-carousel");
 const dots = document.querySelectorAll(".dot");
 
@@ -33,5 +33,53 @@ dots.forEach(dot => {
         const index = parseInt(dot.dataset.index);
         goToSlide(index);
     });
-});
+});*/
 
+
+/* teste carousel
+document.addEventListener('DOMContentLoaded', function () {
+    const carousel = document.getElementById('news-carousel');
+    const dots = document.querySelectorAll('.dot');
+    let currentIndex = 0;
+
+    function updateCarousel() {
+        const offset = -currentIndex * 100 / 2; // 2 cards visíveis por vez
+        carousel.style.transform = `translateX(${offset}%)`;
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === currentIndex);
+        });
+    }
+
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            currentIndex = index;
+            updateCarousel();
+        });
+    });
+
+    updateCarousel();
+});*/
+
+document.addEventListener('DOMContentLoaded', function () {
+    const carousel = document.getElementById('news-carousel');
+    const dots = document.querySelectorAll('.dot');
+    let currentIndex = 0;
+
+    function updateCarousel() {
+        const cardWidth = document.querySelector('.card').offsetWidth;
+        const offset = -currentIndex * (cardWidth * 2 + 20); // 2 cards visíveis por vez, 10px de gap cada
+        carousel.style.transform = `translateX(${offset}px)`;
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === currentIndex);
+        });
+    }
+
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            currentIndex = index;
+            updateCarousel();
+        });
+    });
+
+    updateCarousel();
+});

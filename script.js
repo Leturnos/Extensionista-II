@@ -33,6 +33,8 @@ dots.forEach(dot => {
         const index = parseInt(dot.dataset.index);
         goToSlide(index);
     });
+});
+
 });*/
 
 

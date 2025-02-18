@@ -85,3 +85,53 @@ document.addEventListener('DOMContentLoaded', function () {
 
     updateCarousel();
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    const modal = document.querySelector('.modal');
+    const modalContent = document.querySelector('.modal-content');
+    const modalTitle = document.querySelector('.modal-title');
+    const modalDescription = document.querySelector('.modal-description');
+    const closeModal = document.querySelector('.close');
+
+    // Garante que o modal inicie oculto
+    modal.style.display = 'none';
+
+    // Seleciona todos os artigos
+    const articles = document.querySelectorAll('.portfolio-item');
+
+    // Ao clicar em um artigo, atualiza e exibe o modal
+    articles.forEach(article => {
+        article.addEventListener('click', function () {
+            // Pega os textos para o modal dos atributos data
+            const title = this.getAttribute('data-title');
+            const description = this.getAttribute('data-description');
+
+            modalTitle.textContent = title;
+            modalDescription.textContent = description;
+
+            // Exibe o modal e adiciona a classe para animação
+            modal.style.display = 'flex';
+            setTimeout(() => {
+                modal.classList.add('show');
+            }, 10);
+        });
+    });
+
+    // Fecha o modal ao clicar no botão "X"
+    closeModal.addEventListener('click', function () {
+        modal.classList.remove('show');
+        setTimeout(() => {
+            modal.style.display = 'none';
+        }, 300);
+    });
+
+    // Fecha o modal ao clicar fora do conteúdo (na área escurecida)
+    modal.addEventListener('click', function (event) {
+        if (event.target === modal) {
+            modal.classList.remove('show');
+            setTimeout(() => {
+                modal.style.display = 'none';
+            }, 300);
+        }
+    });
+});

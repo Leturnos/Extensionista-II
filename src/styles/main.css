@@ -135,7 +135,7 @@ body {
 }
 
 #portfolio {
-    padding: 20px;
+    padding: 50px;
 }
 
 .portfolio-container {
@@ -233,7 +233,8 @@ body {
 }
 
 .card {
-    min-width: calc(50% - 10px); /* 2 cards visíveis por vez */
+    min-width: calc(50% - 10px);
+    /* 2 cards visíveis por vez */
     margin: 5px;
     box-sizing: border-box;
 }
@@ -286,13 +287,67 @@ body {
 
 @media (max-width: 600px) {
     .portfolio-item {
-        flex: 1 1 calc(33.333% - 40px); /* 3 items per row */
+        flex: 1 1 calc(33.333% - 40px);
+        /* 3 items per row */
     }
 }
 
 /* Media query for larger screens */
 @media (min-width: 600px) {
     .card {
-        min-width: calc(50% - 10px); /* 2 cards visíveis por vez */
+        min-width: calc(50% - 10px);
+        /* 2 cards visíveis por vez */
     }
+}
+
+.modal {
+    display: none;
+    /* Oculto inicialmente */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    /* Garante que fique acima de outros elementos */
+}
+
+.modal-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    position: relative;
+    width: 50%;
+    max-width: 500px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-20px);
+    /* Efeito inicial */
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Quando a classe .show for adicionada, a animação é ativada */
+.modal.show .modal-content {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Botão fechar */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+    cursor: pointer;
+}
+
+.modal-title {
+    margin-bottom: 10px;
+    /* Ajuste o valor (10px) para a quantidade de espaço desejada */
 }

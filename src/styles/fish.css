@@ -5,77 +5,82 @@
     --cor-container: #ffd37c;
 }
 
-.grid-layout {
+.grid-layout { 
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 1vh 2vw;
+    margin: 1vh 4vw;
     gap: 4vw;
+    margin-top: 6vh;
 }
 
 .fish_body {
+    width: 20vw;
+    height: 20vh;
     display: flex;
+    justify-content: center;
     align-items: center;
 }
 
 .fish_container {
-    display: flex;
-    /* justify-content: center; */
-    /* align-items: center; */
-    position: relative;
-    width: auto;
-    height: 20vh;
+    position: absolute;
+    background-color: var(--white-color);
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
 }
 
 .fish {
-    position: relative;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     background: radial-gradient(#ffd87f, #ffb781);
-    height: 15vh;
-    width: 10vw;
+    height: 200px; 
+    width: 200px;
     border-radius: 50%;
     overflow: hidden;
     z-index: 10;
-    animation: animfish 5s ease-in-out infinite;
-}
-
-.fish label {
-    font-family: 'Sedgwick Ave Display', cursive;
-    color: #f7751b;
-    position: absolute;
-}
-
-@keyframes animfish {
-    0% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-5%);
-    }
+    animation: animfish 6s ease-in-out infinite;
 }
 
 .fish::before {
+    /* é a parte de cima do peixe */
     content: "";
     position: absolute;
     left: 50%;
     bottom: 35%;
     transform: translateX(-50%);
     background: 20% 20% radial-gradient(at bottom center, #ffbe31 5%, #ea7d38);
-    height: 20vh;
-    width: 50vw;
-    border-radius: 50%;
+    height: 150px;
+    width: 300px;
+    border-radius: 40%;
     box-shadow: 1px 1px 15px #ffb781;
+}
+
+@keyframes animfish {
+    0% {
+        transform: translate(-50%, -55%);
+    }
+    50% {
+        transform: translate(-50%, -70%);
+    }
+    100% {
+        transform: translate(-50%, -55%);
+    }
 }
 
 .mouth {
     position: absolute;
     background: linear-gradient(to left, #300900, #843724);
-    height: 15%;
-    width: 10%;
-    top: 55%;
-    left: 10%;
+    height: 20px;
+    width: 10px;
+    top: 58%;
+    left: 44px;
     border-radius: 50%;
     z-index: 50;
+    overflow: hidden;
+    animation: animmouth 6s ease-in-out infinite;
 }
 
 .mouth::before {
@@ -100,7 +105,7 @@
 
 @keyframes animmouth {
     0% {
-        transform: scale(0.4);
+        transform: scale(0.5);
     }
 
     50% {
@@ -108,68 +113,57 @@
     }
 
     100% {
-        transform: scale(0.4);
+        transform: scale(0.5);
     }
 }
 
 .eye {
     position: absolute;
     background: #25152e;
-    top: 40%;
-    left: 20%;
-    height: 10%;
-    width: 7%;
+    top: 44%;
+    left: 20px;
+    height: 30px;
+    width: 20px;
     border-radius: 50%;
-    transform: rotate(-5deg);
+    transform: rotate(-3deg);
     z-index: 20;
+    animation: animeye 6s ease-in-out infinite;
+}
+
+.eye-right {
+    top: 46%;
+    left: 70px;
+    transform: rotate(5deg);
 }
 
 @keyframes animeye {
     0% {
-        height: 20px;
-        width: 15px;
+        height: 15px;
+        width: 10px;
     }
 
     50% {
-        height: 30px;
-        width: 20px;
-    }
-
-    100% {
         height: 20px;
         width: 15px;
     }
-}
 
-.eye-right {
-    left: 60%;
-    transform: rotate(5deg);
+    100% {
+        height: 15px;
+        width: 10px;
+    }
 }
 
 .eyebrow {
     position: absolute;
-    height: 4%;
-    width: 12%;
-    top: 30%;
-    left: 18%;
+    height: 8px;
+    width: 20px;
+    top: 36%;
+    left: 15px;
     border-radius: 50%;
-    border-top: 2px solid #f66b1e;
-    transform: rotate(-15deg);
+    border-top: 5px solid #f66b1e;
+    transform: rotate(-12deg);
     z-index: 10;
-}
-
-@keyframes animeyebrow {
-    0% {
-        top: 42%;
-    }
-
-    50% {
-        top: 36%;
-    }
-
-    100% {
-        top: 42%;
-    }
+    animation: animeyebrow 6s ease-in-out infinite;
 }
 
 .eyebrow::before {
@@ -186,16 +180,35 @@
 }
 
 .eyebrow-right {
-    left: 85px;
+    left: 65px;
     top: 38%;
+    transform: rotate(-12deg);
+}
+
+@keyframes animeyebrow {
+    0% {
+        top: 40%;
+    }
+
+    50% {
+        top: 32%;
+    }
+
+    100% {
+        top: 40%;
+    }
 }
 
 .back-fin {
     position: absolute;
-    top: 50%;
-    right: -15%;
-    height: 50%;
-    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    top: 42%;
+    transform: translateY(-50%);
+    right: -16%;
+    height: 80px;
+    width: 50px;
     background: linear-gradient(to bottom, #febf31, #e9662b);
     clip-path: polygon(0 70%, 0 30%, 100% 0, 100% 100%);
     border-radius: 50%;
@@ -209,7 +222,7 @@
     }
 
     50% {
-        transform: translateY(-60%);
+        transform: translateY(-90%);
     }
 }
 
@@ -253,36 +266,42 @@
 }
 
 .back-fin-detail.fin-detail3 {
-    width: 30px;
+    width: 40px;
 }
 
 .fin-detail4.back-fin-detail {
-    width: 35px;
+    width: 55px;
 }
 
 .fin-detail5.back-fin-detail {
-    width: 25px;
+    width: 35px;
 }
 
 .top-fin {
     position: absolute;
-    height: 25%;
-    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 50px;
+    width: 55px;
     clip-path: polygon(100% 0%, 0 50%, 75% 100%);
     background: linear-gradient(to bottom, #febf31, #e9662b);
     border-radius: 100%;
-    top: 15%;
-    left: 50%;
-    transform: rotate(15deg);
+    top: -10%;
+    left: 70%;
+    transform: rotate(7deg);
+    animation: animtopfin 6s ease-in-out infinite;
 }
 
 @keyframes animtopfin {
     0% {
-        top: 33%;
+        top: -10%;
     }
-
     50% {
-        top: 21%;
+        top: -25%;
+    }
+    100% {
+        top: -10%;
     }
 }
 
@@ -294,44 +313,51 @@
     border-top: 1px solid #fa5609;
 }
 
-
 .bottom-fin {
     position: absolute;
+    display: flex;
+    flex-direction: column;
     background: linear-gradient(to bottom, #ea846a, #ffb375);
     border-radius: 50%;
     top: 80%;
-    left: 50%;
-    height: 20%;
-    width: 25%;
+    left: 70%;
+    height: 32px;
+    width: 45px;
+    animation: animbottomfin 6s ease-in-out infinite;
 }
 
 @keyframes animbottomfin {
     0% {
-        top: 63%;
+        top: 80%;
     }
-
     50% {
-        top: 52%;
+        top: 65%;
+    }
+    100% {
+        top: 80%;
     }
 }
 
-
 .bottom-fin-detail {
-    width: 40px;
-    height: 12px;
+    width: 35px;
+    height: 8px;
     background: transparent;
-    transform: rotate(30deg);
+    transform: rotate(25deg);
     border-radius: 50%;
     border-top: 1px solid #e47761;
 }
 
 .side-fin {
+    padding-top: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
     position: absolute;
-    height: 30%;
-    width: 20%;
-    background: linear-gradient(to bottom, #febf31, #e9662b);
-    left: 20%;
-    top: 55%;
+    height: 30px;
+    width: 45px;
+    background: linear-gradient (to bottom, #febf31, #e9662b);
+    left: 52%;
+    top: 40%;
     border-radius: 50%;
     box-shadow: 1px 5px 5px #ff7d2d;
 }
@@ -339,7 +365,7 @@
 .side-fin::before {
     content: "";
     position: absolute;
-    height: 50px;
+    height: 45px;
     width: 25px;
     background: linear-gradient(to bottom, #fbb133, #ffbc32);
     top: -5px;
@@ -357,9 +383,15 @@
     border-top: 1px solid #fa5609;
 }
 
+label {
+    font-family: 'Sedgwick Ave Display', cursive;
+    color: #f7751b;
+    position: absolute;
+}
+
 .thorn1 {
     left: 50%;
-    font-size: 2rem;
+    font-size: 1.5rem;
     transform: rotate(210deg);
     text-shadow: 1px 1px 15px #fa5609;
 }
@@ -367,14 +399,14 @@
 .thorn2 {
     left: 80%;
     top: 20%;
-    font-size: 1rem;
+    font-size: 0.5rem;
     transform: rotate(220deg);
     text-shadow: 1px 1px 15px #fa5609;
 }
 
 .thorn3 {
-    left: 40%;
-    font-size: 3rem;
+    left: 50%;
+    font-size: 2rem;
     top: 20%;
     transform: rotate(210deg);
     text-shadow: 1px 1px 15px #fa5609;
@@ -382,33 +414,33 @@
 
 .thorn4 {
     left: 85%;
-    font-size: 1.5rem;
+    font-size: 1rem;
     top: 40%;
     transform: rotate(230deg);
     text-shadow: 1px 1px 15px #fa5609;
 }
 
 .thorn5 {
-    left: 20%;
-    font-size: 1.8rem;
+    left: 32%;
+    font-size: 1.2rem;
     color: #f1956d;
-    top: 70%;
+    top: 77%;
     transform: rotate(330deg);
     text-shadow: 1px 1px 15px #cd7853;
 }
 
 .thorn6 {
-    left: 40%;
-    font-size: 2rem;
+    left: 50%;
+    font-size: 1.5rem;
     color: #f1956d;
-    top: 80%;
+    top: 85%;
     transform: rotate(330deg);
     text-shadow: 1px 1px 15px #cd7853;
 }
 
 .thorn7 {
     left: 80%;
-    font-size: 3rem;
+    font-size: 2rem;
     color: #f1956d;
     top: 65%;
     transform: rotate(330deg);
@@ -417,45 +449,42 @@
 
 .thorn8 {
     left: 60%;
-    font-size: 1.2rem;
+    font-size: 0.8rem;
     color: #f1956d;
-    top: 65%;
+    top: 70%;
     transform: rotate(330deg);
     text-shadow: 1px 1px 15px #cd7853;
 }
 
 .thorn9 {
     left: 20%;
-    font-size: rem;
-    top: 10%;
+    font-size: 1rem;
+    top: 15%;
     transform: rotate(210deg);
     text-shadow: 1px 1px 15px #fa5609;
 }
 
 .shadow {
     position: absolute;
-    height: 30px;
-    width: 220px;
+    height: 15px;
+    width: 170px;
     background: #f8b96b;
     border-radius: 50%;
     left: 50%;
     transform: translate(-50%);
-    top: 75%;
+    top: 90%;
     box-shadow: 0px 0px 15px 15px #f8b96b;
     animation: animshadow 6s ease-in-out infinite;
-
 }
 
 @keyframes animshadow {
     0% {
-        width: 220px;
+        width: 170px;
     }
-
     50% {
-        width: 150px;
+        width: 100px;
     }
-
     100% {
-        width: 220px;
+        width: 170px;
     }
 }

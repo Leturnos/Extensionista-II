@@ -8,26 +8,7 @@
     margin: 0;
 }
 
-.carousel-container {
-    display: flex;
-    justify-content: left;
-    border-radius: 10px;
-    /* align-items: center; */
-    position: relative;
-    margin: 10px 20px 0 20px;
-    overflow: hidden;
-}
 
-.carousel {
-    display: flex;
-    gap: 15px;
-    overflow-x: auto;
-    overflow-y: hidden;
-    scroll-behavior: smooth;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-    white-space: nowrap;
-}
 
 /* .carousel::-webkit-scrollbar {display: none;} */
 
@@ -38,7 +19,7 @@
 }
 
 .card:hover {
-    transform: scale(1.05);
+    transform: scale(1.01);
     transition: transform 0.3s ease;
 }
 
@@ -182,82 +163,6 @@ body {
     color: #666;
 }
 
-/*carousel-container
-
-.carousel-container {
-    overflow: hidden;
-    width: 100%;
-    position: relative;
-}
-
-.carousel {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
-
-.card {
-    min-width: calc(50% - 10px); 
-    margin: 5px;
-    box-sizing: border-box;
-}
-
-.carousel-indicators {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-}
-
-.dot {
-    height: 10px;
-    width: 10px;
-    margin: 0 5px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    cursor: pointer;
-}
-
-.dot.active {
-    background-color: #717171;
-} */
-
-.carousel-container {
-    overflow: hidden;
-    width: 100%;
-    position: relative;
-}
-
-.carousel {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
-
-.card {
-    min-width: calc(50% - 10px);
-    /* 2 cards visíveis por vez */
-    margin: 5px;
-    box-sizing: border-box;
-}
-
-.carousel-indicators {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-}
-
-.dot {
-    height: 10px;
-    width: 10px;
-    margin: 0 5px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    cursor: pointer;
-}
-
-.dot.active {
-    background-color: #717171;
-}
 
 /* Ajuste para telas menores */
 @media (max-width: 600px) {

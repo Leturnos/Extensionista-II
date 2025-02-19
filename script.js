@@ -13,55 +13,9 @@ overlay.addEventListener('click', () => {
     overlay.classList.remove('active');
 });
 
-/* carousel-dots 
-const carousel = document.getElementById("news-carousel");
-const dots = document.querySelectorAll(".dot");
-
-function goToSlide(index) {
-    const cardWidth = document.querySelector(".card").offsetWidth;
-    carousel.scrollTo({
-        left: index * (cardWidth + 15), // 15px de gap
-        behavior: "smooth"
-    });
-
-    dots.forEach(dot => dot.classList.remove("active"));
-    dots[index].classList.add("active");
-}
-
-dots.forEach(dot => {
-    dot.addEventListener("click", () => {
-        const index = parseInt(dot.dataset.index);
-        goToSlide(index);
-    });
-});
-
-});*/
 
 
-/* teste carousel
-document.addEventListener('DOMContentLoaded', function () {
-    const carousel = document.getElementById('news-carousel');
-    const dots = document.querySelectorAll('.dot');
-    let currentIndex = 0;
-
-    function updateCarousel() {
-        const offset = -currentIndex * 100 / 2; // 2 cards visíveis por vez
-        carousel.style.transform = `translateX(${offset}%)`;
-        dots.forEach((dot, index) => {
-            dot.classList.toggle('active', index === currentIndex);
-        });
-    }
-
-    dots.forEach((dot, index) => {
-        dot.addEventListener('click', () => {
-            currentIndex = index;
-            updateCarousel();
-        });
-    });
-
-    updateCarousel();
-});*/
-
+// teste carousel
 document.addEventListener('DOMContentLoaded', function () {
     const carousel = document.getElementById('news-carousel');
     const dots = document.querySelectorAll('.dot');
@@ -69,7 +23,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function updateCarousel() {
         const cardWidth = document.querySelector('.card').offsetWidth;
-        const offset = -currentIndex * (cardWidth * 2 + 20); // 2 cards visíveis por vez, 10px de gap cada
+        const isMobile = window.innerWidth < 600;
+        const cardsPerView = isMobile ? 1 : 2;
+        const offset = -currentIndex * (cardWidth * cardsPerView + 10 * (cardsPerView - 1)); // 10px de gap
         carousel.style.transform = `translateX(${offset}px)`;
         dots.forEach((dot, index) => {
             dot.classList.toggle('active', index === currentIndex);
@@ -82,6 +38,8 @@ document.addEventListener('DOMContentLoaded', function () {
             updateCarousel();
         });
     });
+
+    window.addEventListener('resize', updateCarousel);
 
     updateCarousel();
 });

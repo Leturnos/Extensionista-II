@@ -135,3 +135,60 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
+
+// lista com falas pro peixe
+const textos = [
+    {
+        titulo: "Castração gratuita na sua cidade!",
+        paragrafo: "Fique por dentro das campanhas de castração em sua região. \
+        Proteja seu pet e ajude a reduzir o abandono."
+    },
+    {
+        titulo: "Calendário de vacinação para pets",
+        paragrafo: "Vacinar seu pet é essencial para a saúde dele. \
+        Veja os locais e datas das campanhas de vacinação."
+    },
+    {
+        titulo: "Adoção responsável",
+        paragrafo: "Muitos pets esperam por um lar amoroso. Descubra onde adotar e faça a diferença!"
+    },
+    {
+        titulo: "Benefícios da castração para cães e gatos",
+        paragrafo: "A castração ajuda a evitar doenças e comportamentos agressivos."
+    },
+    {
+        titulo: "Mutirão de vacinação neste fim de semana",
+        paragrafo: "Prefeitura organiza campanha de vacinação gratuita.\
+        Leve seu pet e mantenha a carteirinha em dia!"
+    },
+    {
+        titulo: "Dicas para preparar sua casa para um novo pet",
+        paragrafo: "Antes de adotar, é importante adaptar sua casa para receber seu novo amigo.\
+        Veja o que não pode faltar!"
+    },
+    {
+        titulo: "Feira de adoção acontece neste sábado",
+        paragrafo: "Centenas de cães e gatos estarão esperando um novo lar.\
+        Participe e encontre um amigo fiel!"
+    },
+    {
+        titulo: "Como identificar sinais de doenças em pets",
+        paragrafo: "Mudanças de comportamento podem indicar problemas de saúde.\
+        Veja quando procurar um veterinário."
+    },
+    {
+        titulo: "Bem-vindo ao PetCenter",
+        paragrafo: "Aqui você encontra informações sobre castração, vacinação e adoção de pets. \
+        Nosso objetivo é ajudar você a cuidar melhor do seu amigo!"
+    }
+];
+
+let index = 0;
+
+function mudarTexto() {
+    index = (index + 1) % textos.length; // Alterna entre os textos do array
+    document.getElementById("balloonTitle").innerText = textos[index].titulo;
+    document.getElementById("balloonParagraph").innerText = textos[index].paragrafo;
+}
+
+setInterval(mudarTexto, 7000); // Muda o texto a cada 7 segundos

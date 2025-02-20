@@ -99,45 +99,60 @@ const textos = [
     {
         titulo: "Castração gratuita na sua cidade!",
         paragrafo: "Fique por dentro das campanhas de castração em sua região. \
-        Proteja seu pet e ajude a reduzir o abandono."
+            Esse procedimento evita doenças graves como câncer de mama e de próstata, \
+            além de diminuir comportamentos agressivos e marcação de território. \
+            Proteja seu pet!"
     },
     {
         titulo: "Calendário de vacinação para pets",
-        paragrafo: "Vacinar seu pet é essencial para a saúde dele. \
-        Veja os locais e datas das campanhas de vacinação."
+        paragrafo: "Vacinar seu pet é essencial para a saúde dele e de todos ao redor. \
+            A imunização previne doenças como raiva, cinomose, parvovirose e leishmaniose. \
+            Veja os locais e datas das campanhas e mantenha a carteirinha de vacinação do seu pet sempre em dia!"
     },
     {
         titulo: "Adoção responsável",
-        paragrafo: "Muitos pets esperam por um lar amoroso. Descubra onde adotar e faça a diferença!"
-    },
-    {
-        titulo: "Benefícios da castração para cães e gatos",
-        paragrafo: "A castração ajuda a evitar doenças e comportamentos agressivos."
+        paragrafo: "Muitos pets esperam por um lar amoroso, mas a adoção deve ser feita com planejamento. \
+            Antes de adotar, certifique-se de que pode oferecer um ambiente seguro, alimentação adequada e \
+            tempo para seu novo companheiro. \
+            Adotar é um compromisso para toda a vida, Descubra onde adotar e faça a diferença!"
     },
     {
         titulo: "Mutirão de vacinação neste fim de semana",
-        paragrafo: "Prefeitura organiza campanha de vacinação gratuita.\
-        Leve seu pet e mantenha a carteirinha em dia!"
+        paragrafo: "A prefeitura está organizando uma campanha de vacinação gratuita para cães e gatos. \
+            Leve seu pet a um dos postos de vacinação mais próximos e garanta a proteção contra doenças graves. \
+            A vacinação é essencial para evitar surtos e manter a saúde pública. \
+            Não esqueça de levar a carteirinha de vacinação do seu animal!"
     },
     {
         titulo: "Dicas para preparar sua casa para um novo pet",
-        paragrafo: "Antes de adotar, é importante adaptar sua casa para receber seu novo amigo.\
-        Veja o que não pode faltar!"
+        paragrafo: "Antes de adotar um pet, é essencial preparar sua casa para recebê-lo com segurança e conforto. \
+            Providencie uma cama aconchegante, recipientes para comida e água, brinquedos apropriados e um\
+             local tranquilo para descanso. \
+            Certifique-se de que sua casa está segura, removendo objetos perigosos e garantindo que o ambiente\
+             seja adequado para o novo morador. \
+            Se for um gato, ofereça arranhadores e locais elevados para ele se sentir seguro. \
+            Com esses cuidados, a adaptação será mais fácil e seu pet será muito mais feliz!"
     },
     {
         titulo: "Feira de adoção acontece neste sábado",
-        paragrafo: "Centenas de cães e gatos estarão esperando um novo lar.\
-        Participe e encontre um amigo fiel!"
+        paragrafo: "Centenas de cães e gatos estarão esperando um novo lar na feira de adoção deste sábado. \
+            Todos os animais são vacinados, vermifugados e muitos já estão castrados. \
+            Ao adotar, você ganha um amigo fiel e ainda ajuda a reduzir o número de animais abandonados. \
+            Não perca essa chance de mudar a vida de um pet!"
     },
     {
         titulo: "Como identificar sinais de doenças em pets",
-        paragrafo: "Mudanças de comportamento podem indicar problemas de saúde.\
-        Veja quando procurar um veterinário."
+        paragrafo: "Mudanças de comportamento podem indicar problemas de saúde em cães e gatos. \
+            Fique atento a sinais como apatia, falta de apetite, vômitos, diarreia, lambedura excessiva, \
+            coceira intensa ou dificuldade para se mover. \
+            Além disso, alterações na cor da gengiva, secreção nos olhos ou nariz e \
+            respiração ofegante são sinais de alerta. \
+            Caso perceba algum desses sintomas, procure um veterinário o quanto antes!"
     },
     {
         titulo: "Bem-vindo ao PetCenter",
-        paragrafo: "Aqui você encontra informações sobre castração, vacinação e adoção de pets. \
-        Nosso objetivo é ajudar você a cuidar melhor do seu amigo!"
+        paragrafo: "Aqui você encontra informações sobre castração, vacinação e adoção de pets.\
+         Nosso objetivo é ajudar você a cuidar melhor do seu amigo!"
     }
 ];
 

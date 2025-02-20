@@ -11,7 +11,7 @@
 
 .card {
     flex: 0 0 calc(50% - 10px); /* Mostra dois cards por vez com um gap de 10px */
-    margin-right: 10px;
+    margin: 5px;
     box-sizing: border-box;
 }
 

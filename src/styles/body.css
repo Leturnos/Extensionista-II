@@ -18,10 +18,8 @@ body {
     display: block;
 }
 
-
 .modal {
-    display: none;
-    /* Oculto inicialmente */
+    display: none; /* Oculto inicialmente */
     position: fixed;
     top: 0;
     left: 0;
@@ -31,7 +29,6 @@ body {
     justify-content: center;
     align-items: center;
     z-index: 9999;
-    /* Garante que fique acima de outros elementos */
 }
 
 .modal-content {
@@ -68,5 +65,4 @@ body {
 
 .modal-title {
     margin-bottom: 10px;
-    /* Ajuste o valor (10px) para a quantidade de espaço desejada */
 }

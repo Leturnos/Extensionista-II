@@ -15,11 +15,21 @@
 }
 
 .fish_body {
+    transform: translateY(100%);
+    opacity: 0;
+    transition: transform 1s ease-out, opacity 1s ease-out;
+
     width: 20vw;
     height: 20vh;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/* É chamado pelo javascript */
+.fish_body.show {
+    transform: translateY(0);
+    opacity: 1;
 }
 
 .fish_container {

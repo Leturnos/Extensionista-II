@@ -142,7 +142,7 @@
     margin-left: 1rem;
 }
 
-.title:hover {
+.main_title:hover {
     color: #da5c82;
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
 }

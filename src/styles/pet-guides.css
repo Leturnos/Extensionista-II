@@ -1,0 +1,106 @@
+/* CSS para as paginas de matéria */
+.image-container {
+    position: relative;
+    text-align: center;
+    margin-top: 13vh;
+    margin-bottom: 20px;
+}
+
+.large-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0 0 20px 20px;
+}
+
+.title-overlay {
+    position: relative;
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.5);
+    padding: 1vw;
+    border-radius: 0 0 30px 30px;
+    margin: 0 15vw 0 15vw;
+}
+
+/* Estilo para o conteúdo da matéria */
+.content-container {
+    width: 80%;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;  
+    text-align: justify;
+
+}
+
+.content-container h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.content-container p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 15px; 
+}
+
+.highlight-quote {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #555;
+    border-left: 4px solid #4CAF50;
+    padding-left: 20px;
+    margin: 20px 0;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    line-height: 1.5;
+}
+
+.tópicos-lista {
+    list-style-type: disc;
+    /* Bolinha no começo de cada item */
+    padding-left: 20px;
+}
+
+.tópicos-lista li {
+    margin-bottom: 10px;
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 1024px) {
+    .content-container {
+        width: 90%;
+    }
+
+    .large-image {
+        width: 60%;
+    }
+
+    .title-overlay{
+        margin: 0 10vw 0 10vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .content-container {
+        width: 90%;
+       
+    }
+
+    .large-image {
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .title-overlay{
+        margin: 0;
+        border-radius: 0;
+    }
+
+    .content-container p {
+        font-size: 0.9rem;
+    }
+}
+

@@ -184,7 +184,7 @@ function changeText() {
     }, 500);
 }
 
-// Mostra o balão após 1,5 segundos e inicia a troca de textos
+// Mostra o balão e o peixe após 1 segundo e inicia a troca de textos
 setTimeout(() => {
     const balloon = document.getElementById("speechBubble");
     const showFish = document.getElementById("show_fish");
@@ -199,6 +199,6 @@ setTimeout(() => {
     setTimeout(() => {
         changeText();
     }, 8000);
-}, 1500);
+}, 1000);
 
 

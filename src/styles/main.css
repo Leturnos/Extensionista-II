@@ -58,9 +58,7 @@
 }
 
 .container-text {
-    /* Rápido */
-    /* display: none; */
-    /* Devagar */
+    /* Efeito */
     visibility: hidden;
     opacity: 0;
     transform: scale(0.8);
@@ -78,9 +76,11 @@
 
 .content-text h2,
 p {
+    font-family: Arial, sans-serif;
     padding: 0.5vh;
     opacity: 1;
     transition: opacity 0.5s ease-in-out;
+    
 }
 
 /* parte de fora da seta */
@@ -111,15 +111,6 @@ p {
     border-top: 1.6vw solid transparent;
     border-bottom: 1.6vw solid transparent;
     border-left: 3.2vw solid #D9D9D9;
-}
-
-
-/* Estilo */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
-    margin: 0;
-    padding: 0;
 }
 
 #portfolio {
@@ -212,93 +203,3 @@ body {
     }
 }
 
-/* CSS para as paginas de materia
-
-/* Estilo para a imagem centralizada */
-.image-container {
-    text-align: center;
-    margin-top: 200px;
-    /* Aumente ou diminua esse valor conforme necessário */
-    margin-bottom: 20px;
-    position: relative
-}
-
-
-.large-image {
-    max-width: 100%;
-    height: auto;
-    /* Para a imagem se ajustar ao tamanho da tela */
-    border-radius: 10px;
-    /* Bordas arredondadas na imagem, se desejar */
-}
-
-.title-overlay {
-    position: inherit;
-    top: -12%;
-    /* Ajuste conforme necessário */
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 2rem;
-    font-weight: bold;
-    color: white;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-    background: rgba(0, 0, 0, 0.5);
-    padding: 5px;
-    border-radius: 5px;
-}
-
-/* Estilo para o conteúdo da matéria */
-.content-container {
-    width: 80%;
-    margin: 20px auto;
-    /* Centraliza o conteúdo na tela */
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-}
-
-.content-container h2 {
-    font-size: 2rem;
-    color: #333;
-    margin-bottom: 20px;
-}
-
-.content-container p {
-    font-size: 1.1rem;
-    color: #555;
-    margin-bottom: 15px;
-}
-
-/* Responsividade para telas pequenas */
-@media screen and (max-width: 768px) {
-    .content-container {
-        width: 90%;
-    }
-
-    .large-image {
-        width: 100%;
-    }
-}
-
-.highlight-quote {
-    font-size: 1.2rem;
-    font-style: italic;
-    color: #555;
-    border-left: 4px solid #4CAF50;
-    padding-left: 20px;
-    margin: 20px 0;
-    background-color: #f9f9f9;
-    border-radius: 5px;
-    line-height: 1.5;
-}
-
-.tópicos-lista {
-    list-style-type: disc;
-    /* Bolinha no começo de cada item */
-    padding-left: 20px;
-    /* Espaçamento à esquerda da lista */
-}
-
-.tópicos-lista li {
-    margin-bottom: 10px;
-    /* Espaçamento entre os itens */
-}

@@ -176,12 +176,12 @@ function changeText() {
         index = (index + 1) % textos.length;
 
         const baseTime = 6000; // Tempo mínimo de 6 segundos
-            const charMultiplier = 20; // Tempo extra por caractere
-            const newInterval = baseTime + (textos[index].paragrafo.length * charMultiplier);
+        const charMultiplier = 20; // Tempo extra por caractere
+        const newInterval = baseTime + (textos[index].paragrafo.length * charMultiplier);
 
-            // Chama a próxima mudança de texto com o tempo ajustado
-            setTimeout(changeText, newInterval);
-    }, 500); 
+        // Chama a próxima mudança de texto com o tempo ajustado
+        setTimeout(changeText, newInterval);
+    }, 500);
 }
 
 // Mostra o balão após 1,5 segundos e inicia a troca de textos
@@ -190,13 +190,15 @@ setTimeout(() => {
     const showFish = document.getElementById("show_fish");
 
     showFish.classList.add("show") // mostra o peixe subindo
-    
-    balloon.style.visibility = "visible"; 
-    balloon.style.opacity = "1"; 
-    balloon.style.transform = "scale(1)"; 
 
-        // após 8 segundos com a mensagem de bem-vindo, começa a rotacionar os textos
-        setTimeout(() => { 
-            changeText();
-        }, 8000);
+    balloon.style.visibility = "visible";
+    balloon.style.opacity = "1";
+    balloon.style.transform = "scale(1)";
+
+    // após 8 segundos com a mensagem de bem-vindo, começa a rotacionar os textos
+    setTimeout(() => {
+        changeText();
+    }, 8000);
 }, 1500);
+
+

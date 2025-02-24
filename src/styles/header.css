@@ -39,7 +39,7 @@
     top: 0;
     left: 0;
     height: 100%;
-    width: 25vw; 
+    width: 25vw;
     min-width: 300px;
     background-color: rgba(255, 254, 254, 0.8);
     transform: translateX(-100%);
@@ -59,21 +59,72 @@
 }
 
 .sidebar-menu li {
+    padding: 15px 20px;
     margin-bottom: 10px;
-    font-weight: 900;
+    text-align: left;
+    border-radius: 8px;
+    /* Borda arredondada */
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .sidebar-menu a {
+    color: white;
     text-decoration: none;
-    color: var(--sidebar-text-color);
+    font-size: 18px;
+    font-family: 'Arial', sans-serif;
+    display: block;
+    transition: color 0.3s ease, transform 0.3s ease;
+    padding-left: 10px;
+}
+
+.sidebar-menu li:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    /* Leve destaque */
+    transform: scale(1.05);
+    /* Leve aumento de tamanho */
+}
+
+/* hover nos links */
+.sidebar-menu a:hover {
+    color: #00bcd4;
+    /* coloquei cor ao passar o mouse */
+    padding-left: 20px;
+    /* desloca pra esquerda */
+    transform: translateX(5px);
+    /* pequeno movimento de deslizar para a direita */
 }
 
 .sidebar-menu ul li a {
-    color: rgb(179, 52, 52);
+    color: rgb(8, 7, 7);
     text-decoration: none;
     font-size: 1.2rem;
     display: flex;
     align-items: center;
+    padding: 10px 20px;
+    border: 2px solid #00bcd4;
+    border-radius: 25px;
+    margin: 1px 0;
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+/* Efeito de hover para o link/botão */
+.sidebar-menu ul li a:hover {
+    background-color: #00bcd4;
+    /* muda a cor do fundo ao passar o mouse */
+    color: white;
+    /* muda a cor do texto no hover */
+    border-color: #008c9e;
+    /* borda tambem muda no hover */
+    transform: translateX(5px);
+    /* se move pra direita, igual fizemos com a sidebar */
+}
+
+/* Efeito de foco*/
+.sidebar-menu ul li a:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 188, 212, 0.5);
+    /* sombra no foco */
 }
 
 .sidebar-menu ul li a i {
@@ -97,8 +148,8 @@
 }
 
 .welcome-message {
-    flex: 1; 
-    text-align: center; 
+    flex: 1;
+    text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -188,11 +239,11 @@
     }
 
     .welcome-message {
-        display: none; 
+        display: none;
     }
 
     .header__search {
-        width: 100%; 
+        width: 100%;
         height: 40%;
         margin: 0;
     }
@@ -210,7 +261,7 @@
     }
 
     .header__search {
-        width: 50%; 
+        width: 50%;
         margin: 5px auto;
     }
 }
@@ -219,17 +270,17 @@
     .sidebar-menu {
         width: 100%;
     }
-    
+
     .title {
         font-size: 1.3rem;
     }
 
     .header__search {
-        width: 70%; 
+        width: 70%;
         height: 40%;
         margin: 0;
     }
-    
+
     .locality {
         display: none;
     }
@@ -245,9 +296,8 @@
     }
 
     .header__search {
-        width: 70%; 
+        width: 70%;
         height: 30%;
         margin: 0;
     }
 }
-

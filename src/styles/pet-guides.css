@@ -7,7 +7,7 @@
 }
 
 .large-image {
-    max-width: 100%;
+    width: 50vw;
     height: auto;
     border-radius: 0 0 20px 20px;
 }

@@ -13,33 +13,49 @@ overlay.addEventListener('click', () => {
     overlay.classList.remove('active');
 });
 
-// teste carousel
+// automação do  carousel
+
 document.addEventListener('DOMContentLoaded', function () {
     const carousel = document.getElementById('news-carousel');
     const dots = document.querySelectorAll('.dot');
     let currentIndex = 0;
+    let interval;
 
     function updateCarousel() {
         const cardWidth = document.querySelector('.card').offsetWidth;
         const isMobile = window.innerWidth < 600;
         const cardsPerView = isMobile ? 1 : 2;
-        const offset = -currentIndex * (cardWidth * cardsPerView + 20 * (cardsPerView - 1)); // 20px de gap
+        const offset = -currentIndex * (cardWidth * cardsPerView + 10 * (cardsPerView - 1)); // 10px de gap
         carousel.style.transform = `translateX(${offset}px)`;
         dots.forEach((dot, index) => {
             dot.classList.toggle('active', index === currentIndex);
         });
     }
 
+    function startAutoSlide() {
+        interval = setInterval(() => {
+            currentIndex = (currentIndex + 1) % dots.length;
+            updateCarousel();
+        }, 5000); // 5 segundos
+    }
+
+    function stopAutoSlide() {
+        clearInterval(interval);
+    }
+
     dots.forEach((dot, index) => {
         dot.addEventListener('click', () => {
             currentIndex = index;
             updateCarousel();
+            stopAutoSlide();
+            startAutoSlide();
         });
     });
 
     window.addEventListener('resize', updateCarousel);
 
     updateCarousel();
+    startAutoSlide();
 });
 
 document.addEventListener('DOMContentLoaded', function () {

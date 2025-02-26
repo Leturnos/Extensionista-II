@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const cardWidth = document.querySelector('.card').offsetWidth;
         const isMobile = window.innerWidth < 600;
         const cardsPerView = isMobile ? 1 : 2;
-        const offset = -currentIndex * (cardWidth * cardsPerView + 10 * (cardsPerView - 1)); // 10px de gap
+        const offset = -currentIndex * (cardWidth * cardsPerView + 18 * (cardsPerView - 1)); // 18px de gap
         carousel.style.transform = `translateX(${offset}px)`;
         dots.forEach((dot, index) => {
             dot.classList.toggle('active', index === currentIndex);

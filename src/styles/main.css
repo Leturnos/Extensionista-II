@@ -4,8 +4,9 @@
 
 .news-title {
     font-family: var(--font-segoe-ui);
-    padding: 0 0 0 20px;
-    margin: 0;
+    font-size: 20px;
+    padding: 0 0 0 25px;
+    margin: 0 0 15px 0;
 }
 
 .card {
@@ -58,7 +59,7 @@
 }
 
 .container-text {
-    /* Efeito */
+    /* Efeito  do texto aparecendo*/
     visibility: hidden;
     opacity: 0;
     transform: scale(0.8);
@@ -117,17 +118,29 @@ p {
     padding: 50px;
 }
 
+.title_portfolio{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+.title_portfolio h1{
+    font-size: 28px;
+}
+
 .portfolio-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    /* Centralizar os cards */
     gap: 20px;
 }
 
 .portfolio-item {
     flex: 1 1 calc(33.333% - 40px);
-    /* Ajustar o tamanho dos cards */
+    /* Ajusta o tamanho dos cards */
     box-sizing: border-box;
     background-color: #fff;
     padding: 10px;
@@ -139,13 +152,12 @@ p {
     position: relative;
     z-index: 1;
     margin-bottom: 20px;
-    /* Alterar se quiser mudar o espaçamento dos cards */
 }
 
 .portfolio-item img {
     max-width: 100%;
     height: 275px;
-    /* Ajustar o tamanho da imagem, mas ainda nao sei qual tamanho fica melhor*/
+    /* Ajustei o tamanho da imagem, mas ainda nao sei qual tamanho fica melhor*/
     object-fit: cover;
     /* é pra img cobrir todo o card */
     border-radius: 5px;
@@ -162,44 +174,17 @@ p {
 }
 
 
-/* Ajuste para telas menores */
-@media (max-width: 600px) {
-    .container-text {
-        max-width: 100%;
-        flex: 1 1 100%;
-    }
-}
-
-.close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 24px;
-    font-weight: bold;
-    color: #000;
-    cursor: pointer;
-}
-
-/* Responsividade do Luis*/
+/* Responsividade */
 @media (max-width: 900px) {
     .portfolio-item {
-        flex: 1 1 calc(50% - 40px);
-        /* Ajusta para dois cards por linha */
+        flex: 1 1 calc(50% - 20px); /* Ocupa 50% da largura com margem */
     }
 }
 
 @media (max-width: 600px) {
     .portfolio-item {
-        flex: 1 1 calc(33.333% - 40px);
-        /* 3 items per row */
+        flex: 1 1 calc(100% - 20px); /* Ocupa 100% da largura */
     }
 }
 
-/* Media query for larger screens */
-@media (min-width: 600px) {
-    .card {
-        min-width: calc(50% - 10px);
-        /* 2 cards visíveis por vez */
-    }
-}
 

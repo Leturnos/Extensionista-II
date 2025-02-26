@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetCenter</title>
+
+    <link rel="stylesheet" href="./src/styles/reset.css">
+    <link rel="stylesheet" href="./src/styles/vars.css">
+    <link rel="stylesheet" href="./src/styles/body.css">
+    <link rel="stylesheet" href="./src/styles/header.css">
+    <link rel="stylesheet" href="./src/styles/pet-guides.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+
+<body>
+    <div class="overlay" id="overlay"></div>
+    <div class="sidebar-menu" id="sidebar-menu">
+        <ul>
+            <li><a href="./castrar.html">Beneficios da castração</a></li>
+            <li><a href="./vacinar.html">Beneficios da Vacinação</a></li>
+            <li><a href="./adotar.html">Por que adotar um pet? Conheça seus benefícios</a></li>
+        </ul>
+    </div>
+    <header>
+        <nav class="header__container">
+            <button class="sidebar" id="sidebar-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <a href="./index.html">
+                <h1 class="main_title">PETCENTER</h1>
+            </a>
+
+            <div class="welcome-message">
+                <span class="strong-text">BEM <br>VINDO</span>
+                <h2>Ao seu canal pet</h2>
+            </div>
+
+            <div class="header__search">
+                <input id="search-input" maxlength="800" autocorrect="off" autocapitalize="off" spellcheck="false"
+                    placeholder="Pesquise aqui" value="" />
+                <a href="#">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Seção de imagem centralizada e matéria -->
+    <main>
+        <section class="image-container">
+            <div class="title-overlay">Benefícios da Castração</div>
+            <img src="./src/assets/news/castrar.png" alt="foto de um gato" class="large-image">
+        </section>
+
+        <section class="content-container">
+            <blockquote class="highlight-quote">
+                <h3>Além de reduzir a natalidade de filhotes indesejados, a castração também colabora para a longevidade
+                    e bem-estar dos animais.</h3>
+            </blockquote>
+
+            <h2>Castração: o que é e por que fazer?</h2>
+            <p>
+                A castração é um método mundialmente reconhecido por ser seguro e eficaz no controle populacional de
+                cães e gatos e muito indicado pelos médicos-veterinários, por atuar na prevenção e redução de diversas
+                doenças. Além de tornar o pet mais tranquilo, a castração reduz a agressividade e a marcação de território, 
+                resultando em um amigo mais afetuoso.
+            </p>
+            <p>
+                Os métodos cirúrgicos mais utilizados para este procedimento são:
+            </p>
+
+            <ul class="tópicos-lista">
+                <li>
+                    <strong>Ovariosalpingohisterectomia</strong> (OSH) - onde ocorre a remoção do útero e ovários das
+                    fêmeas.
+                </li>
+                <li>
+                    <strong>Orquiectomia</strong> - através da extração de ambos os testículos dos machos.
+                </li>
+            </ul>
+            <p>
+                O procedimento é simples e relativamente rápido, entretanto requer cuidados e exames pré-operatórios.
+            </p>
+            <p>
+                Após a cirurgia, é importante que o pet utilize um macacão ou colar para proteger os pontos, e deve-se
+                ter cuidado para que ele não faça muito esforço ou atividades físicas durante o período pós-operatório,
+                que leva de 7 a 10 dias até a retirada dos pontos.
+                Todos os cuidados no pré e pós-operatório, bem como as avaliações e orientações, serão passadas pelo
+                <strong>médico-veterinário do pet.</strong>
+            </p>
+
+            <h2> Agora vamos aos benefícios da castração!</h2>
+            <ul class="tópicos-lista">
+                <ul class="tópicos-lista">
+                    <li><strong>Redução de passeios externos:</strong> Diminui os problemas associados, como doenças
+                        infecciosas, traumas e atropelamentos, intoxicações e maus-tratos;</li>
+
+                    <li><strong>Menos doenças zoonóticas:</strong> A castração contribui para a redução de doenças
+                        transmitidas de pets para humanos, como a Raiva e a Leishmaniose;</li>
+
+                    <li><strong>Prevenção de doenças reprodutivas:</strong> Ajuda a evitar o comportamento de cio em
+                        fêmeas e previne doenças reprodutivas, garantindo a saúde do animal;</li>
+
+                    <li><strong>Redução de enfermidades mamárias:</strong> Diminui o risco de neoplasias e piometra
+                        (infecção no útero), contribuindo para a saúde a longo prazo das fêmeas;</li>
+
+                    <li><strong>Prevenção de distúrbios testiculares:</strong> Reduz o risco de neoplasias, orquites e
+                        epididimites em machos, além de ajudar no tratamento de doenças relacionadas à próstata;</li>
+
+                    <li><strong>Auxílio no tratamento de doenças:</strong> A castração pode ajudar no tratamento de
+                        condições não relacionadas ao sistema reprodutivo, como diabetes e epilepsia;</li>
+
+                    <li><strong>Comportamento mais calmo:</strong> Pode resultar em uma redução de comportamentos
+                        indesejados, como territorialismo, agressividade e marcação de território;</li>
+
+                    <li><strong>Diminuição da superpopulação:</strong> Um dos principais benefícios é a redução do
+                        número de animais abandonados, ajudando a controlar a superpopulação pet;</li>
+
+                    <li><strong>Impacto na reprodução:</strong> Pesquisas indicam que apenas um casal de pets pode gerar
+                        um número expressivo de descendentes durante sua vida reprodutiva, agravando a superpopulação.
+                    </li>
+                </ul>
+        </section>
+    </main>
+
+    <script src="./script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetCenter</title>
+
+    <link rel="stylesheet" href="./src/styles/reset.css">
+    <link rel="stylesheet" href="./src/styles/vars.css">
+    <link rel="stylesheet" href="./src/styles/body.css">
+    <link rel="stylesheet" href="./src/styles/header.css">
+    <link rel="stylesheet" href="./src/styles/pet-guides.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+
+<body>
+    <div class="overlay" id="overlay"></div>
+    <div class="sidebar-menu" id="sidebar-menu">
+        <ul>
+            <li><a href="./castrar.html">Beneficios da castração</a></li>
+            <li><a href="./vacinar.html">Beneficios da Vacinação</a></li>
+            <li><a href="./adotar.html">Por que adotar um pet? Conheça seus benefícios</a></li>
+        </ul>
+    </div>
+    <header>
+        <nav class="header__container">
+            <button class="sidebar" id="sidebar-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <a href="./index.html">
+                <h1 class="main_title">PETCENTER</h1>
+            </a>
+
+            <div class="welcome-message">
+                <span class="strong-text">BEM <br>VINDO</span>
+                <h2>Ao seu canal pet</h2>
+            </div>
+
+            <div class="header__search">
+                <input id="search-input" maxlength="800" autocorrect="off" autocapitalize="off" spellcheck="false"
+                    placeholder="Pesquise aqui" value="" />
+                <a href="#">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <!-- Seção de imagem centralizada e matéria -->
+        <section class="image-container">
+            <div class="title-overlay">Por que adotar um pet? Conheça seus benefícios</div>
+            <img src="./src/assets/news/adotar.png" alt="foto de um gato" class="large-image">
+        </section>
+
+        <section class="content-container">
+            <blockquote class="highlight-quote">
+                <h3>Adotar cães e gatos traz inúmeros benefícios, tanto para os animais quanto para os tutores. 
+                    Ao oferecer um lar a um animal abandonado, você salva uma vida e ganha um companheiro leal, 
+                    promovendo bem-estar mútuo.</h3>
+            </blockquote>
+
+            <h2>Por que adotar?</h2>
+            <p>
+                Adotar um animal contribui para o desenvolvimento pessoal, ajudando a combater a solidão e o estresse. Além de ser uma opção mais econômica em 
+                comparação à compra, considerando que muitos abrigos já fornecem vacinas e cuidados iniciais. 
+                Por fim, ao adotar, você contribui para a redução do número de animais abandonados,
+                promovendo uma sociedade mais consciente e compassiva.
+            </p>
+            <h2> Benefícios da adoção:</h2>
+            <p>
+            <ul class="tópicos-lista">
+                <li><strong>Salva vidas:</strong> A adoção reduz o número de animais abandonados e dá uma segunda chance a cães e gatos que precisam de um lar;</li>
+                <li><strong>Gera benefícios emocionais:</strong> Conviver com um pet ajuda a reduzir o estresse, a ansiedade e melhora a saúde mental do tutor;</li>
+                <li><strong>Redução de gastos com tratamentos:</strong> Prevenir doenças através da vacinação é mais econômico e menos estressante do que tratar enfermidades estabelecidas;</li>
+                <li><strong>Fortalece o vínculo humano-animal:</strong> O amor e a lealdade dos pets criam um vínculo especial com seus tutores, trazendo alegria e companhia diária;</li>
+                <li><strong>Melhora na qualidade de vida:</strong> Animais protegidos contra doenças vivem mais saudáveis, com menos risco de complicações e sofrimento;</li>
+                <li><strong>É uma opção acessível:</strong> Abrigos e ONGs geralmente entregam os animais vacinados e castrados, tornando a adoção mais econômica do que a compra;</li>
+                <li><strong>Ensina responsabilidade:</strong> Cuidar de um pet exige compromisso, o que ajuda a desenvolver responsabilidade e empatia.</li>
+            </ul>
+            </p>
+        </section>
+    </main>
+    <script src="./script.js"></script>
+
+</body>

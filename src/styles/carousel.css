@@ -1,4 +1,4 @@
-.carousel-container {
+/*.carousel-container {
     overflow: hidden;
     position: relative;
     width: 100%;
@@ -10,7 +10,7 @@
 }
 
 .card {
-    flex: 0 0 calc(50% - 10px); /* Mostra dois cards por vez com um gap de 10px */
+    flex: 0 0 calc(50% - 10px); /* Mostra dois cards por vez com um gap de 10px *//*
     margin: 5px;
     box-sizing: border-box;
 }
@@ -38,6 +38,79 @@
 
 @media (max-width: 600px) {
     .card {
-        flex: 0 0 calc(100% - 15px); /* Exibe apenas um card por vez em telas pequenas */
+        flex: 0 0 calc(100% - 15px); /* Exibe apenas um card por vez em telas pequenas *//*
     }
 }
+*/
+
+.carousel-container {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.card {
+    flex: 0 0 calc(50% - 20px); /* Mostra dois cards por vez com um gap de 20px */
+    margin: 10px; /* Ajuste a margem conforme necessário */
+   /*padding: 10px; /* Ajuste o padding conforme necessário */
+    box-sizing: border-box;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+    z-index: 1;
+}
+
+.card img {
+    max-width: 100%;
+    height: 400px; /* Ajuste a altura conforme necessário */
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.card h3 {
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+
+.card p {
+    font-size: 1em;
+    color: #666;
+}
+
+.carousel-indicators {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.dot {
+    cursor: pointer;
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: #717171;
+}
+
+@media (max-width: 600px) {
+    .card {
+        flex: 0 0 calc(100% - 20px); /* Exibe apenas um card por vez em telas pequenas */
+        margin: 10px; /* Ajuste a margem conforme necessário */
+        padding: 10px; /* Ajuste o padding conforme necessário */
+    }
+}
+    

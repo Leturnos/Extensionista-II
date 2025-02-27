@@ -118,10 +118,14 @@ const textos = [
         Proteja seu pet!"
     },
     {
-        titulo: "Calendário de vacinação para pets",
-        paragrafo: "Vacinar seu pet é essencial para a saúde dele e de todos ao redor. \
-        A imunização previne doenças como raiva, cinomose, parvovirose e leishmaniose. \
-        Veja os locais e datas das campanhas e mantenha a carteirinha de vacinação do seu pet sempre em dia!"
+        titulo: "Vacinação contra raiva em Cães e Gatos",
+        paragrafo: "A prefeitura de São Paulo está com uma campanha permanente de vacinação gratuita para cães e gatos. \
+        Leve seu pet a um dos postos da Divisão de Vigilância de Zoonoses ou em uma UVIS(Unidade de Vigilância em Saúde) \
+        mais próxima e garanta a proteção contra a raiva. \
+        A vacinação é essencial para evitar surtos e manter a saúde pública. \
+        Não esqueça de levar a carteirinha de vacinação do seu animal! \
+        <a href=\"https://capital.sp.gov.br/web/saude/w/vigilancia_em_saude/controle_de_zoonoses/noticias/5435\" target=\"_blank\
+        \" style=\"color: blue; text-decoration: underline;\">Clique aqui</a> e saiba mais"
     },
     {
         titulo: "Adoção responsável",
@@ -129,13 +133,6 @@ const textos = [
         Antes de adotar, certifique-se de que pode oferecer um ambiente seguro, alimentação adequada e \
         tempo para seu novo companheiro. \
         Adotar é um compromisso para toda a vida, Descubra onde adotar e faça a diferença!"
-    },
-    {
-        titulo: "Mutirão de vacinação neste fim de semana",
-        paragrafo: "A prefeitura está organizando uma campanha de vacinação gratuita para cães e gatos. \
-        Leve seu pet a um dos postos de vacinação mais próximos e garanta a proteção contra doenças graves. \
-        A vacinação é essencial para evitar surtos e manter a saúde pública. \
-        Não esqueça de levar a carteirinha de vacinação do seu animal!"
     },
     {
         titulo: "Dicas para preparar sua casa para um novo pet",
@@ -148,11 +145,11 @@ const textos = [
         Com esses cuidados, a adaptação será mais fácil e seu pet será muito mais feliz!"
     },
     {
-        titulo: "Feira de adoção acontece neste sábado",
-        paragrafo: "Centenas de cães e gatos estarão esperando um novo lar na feira de adoção deste sábado. \
-        Todos os animais são vacinados, vermifugados e muitos já estão castrados. \
-        Ao adotar, você ganha um amigo fiel e ainda ajuda a reduzir o número de animais abandonados. \
-        Não perca essa chance de mudar a vida de um pet!"
+        titulo: "Prefeitura de São Paulo realizou “Folia da Adoção”",
+        paragrafo: "A Prefeitura de SP promoveu um evento chamado “Folia da Adoção”, com o tema \
+        “Me dá uma família aí”, no sábado (22) em Santana, na zona norte da capital. \
+        A atividade pré-carnavalesca organizada pela Cosap (Coordenadoria de Saúde e Proteção ao Animal Doméstico)\
+        foi um sucesso. Fique esperto no site para não perder os próximos eventos!"
     },
     {
         titulo: "Como identificar sinais de doenças em pets",
@@ -182,7 +179,7 @@ function changeText() {
     setTimeout(() => {
         // Troca o texto quando ele estiver invisível
         title.innerText = textos[index].titulo;
-        paragraph.innerText = textos[index].paragrafo;
+        paragraph.innerHTML = textos[index].paragrafo;
 
         // Inicia o efeito de fade-in
         title.style.opacity = 1;
@@ -191,8 +188,8 @@ function changeText() {
         // Atualiza o índice para o próximo texto
         index = (index + 1) % textos.length;
 
-        const baseTime = 6000; // Tempo mínimo de 6 segundos
-        const charMultiplier = 20; // Tempo extra por caractere
+        const baseTime = 6000; // Tempo mínimo de 5 segundos
+        const charMultiplier = 30; // Tempo extra por caractere
         const newInterval = baseTime + (textos[index].paragrafo.length * charMultiplier);
 
         // Chama a próxima mudança de texto com o tempo ajustado

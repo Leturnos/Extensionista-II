@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetCenter</title>
+
+    <link rel="stylesheet" href="./src/styles/reset.css">
+    <link rel="stylesheet" href="./src/styles/vars.css">
+    <link rel="stylesheet" href="./src/styles/body.css">
+    <link rel="stylesheet" href="./src/styles/header.css">
+    <link rel="stylesheet" href="./src/styles/pet-news.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+
+<body>
+    <div class="overlay" id="overlay"></div>
+    <div class="sidebar-menu" id="sidebar-menu">
+        <ul>
+            <li><a href="./castrar.html">Beneficios da castração</a></li>
+            <li><a href="./vacinar.html">Beneficios da Vacinação</a></li>
+            <li><a href="./adotar.html">Por que adotar um pet? Conheça seus benefícios</a></li>
+        </ul>
+    </div>
+    <header>
+        <nav class="header__container">
+            <button class="sidebar" id="sidebar-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <a href="./index.html">
+                <h1 class="main_title">PETCENTER</h1>
+            </a>
+
+            <div class="welcome-message">
+                <span class="strong-text">BEM <br>VINDO</span>
+                <h2>Ao seu canal pet</h2>
+            </div>
+
+            <div class="header__search">
+                <input id="search-input" maxlength="800" autocorrect="off" autocapitalize="off" spellcheck="false"
+                    placeholder="Pesquise aqui" value="" />
+                <a href="#">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Seção de imagem centralizada e matéria -->
+    <main>
+        <section class="image-container">
+            <div class="title-overlay">Feiras de Adoção em São Paulo</div>
+            <img src="./src/assets/news/evento_adocao.jpeg" alt="foto de um cachorro" class="large-image">
+        </section>
+
+        <section class="content-container">
+            <div class="container">
+                <p>São Paulo é uma cidade que oferece diversas oportunidades para quem deseja adotar um animal de
+                    estimação.
+                    Feiras de adoção acontecem regularmente, permitindo que cães e gatos encontrem um lar cheio de
+                    carinho.
+                    Se você está pensando em ter um pet, essa pode ser uma excelente oportunidade!</p>
+
+                <h2>Feira de Adoção no Parque Villa Lobos</h2>
+                <p>Uma das principais feiras da cidade acontece no <span class="highlight">Parque Villa Lobos</span>.
+                    O evento ocorre todos os domingos, das 11h30 às 17h30. Para adotar, é necessário ter mais de 21
+                    anos,
+                    apresentar <strong>RG, CPF e comprovante de residência</strong>, além de assinar um Termo de Adoção
+                    Responsável.
+                    O local da feira é no estacionamento do parque, situado na Av. Prof. Fonseca Rodrigues.</p>
+
+                <h2>Feira Permanente de Adoção do CCZ</h2>
+                <p>Outra alternativa para quem deseja adotar um pet é a Feira Permanente do <span
+                        class="highlight">Centro de Controle de Zoonoses (CCZ)</span>.
+                    O espaço funciona de segunda a sexta-feira, das 9h às 17h, e aos sábados, das 9h às 15h. O endereço
+                    é Rua Santa Eulália, 86, no bairro de Santana,
+                    próximo ao metrô Carandiru.</p>
+
+                <h2>Por que adotar?</h2>
+                <p>Além de dar um lar para um animal que precisa, a adoção contribui para a redução do número de pets
+                    abandonados.
+                    Muitos desses cães e gatos foram resgatados de situações de maus-tratos ou abandono, e agora
+                    aguardam por uma segunda chance. </p>
+
+                <p>Se você deseja mais informações sobre adoção responsável, entre em contato com o CCZ pelo e-mail:
+                    <strong>zoonoses@prefeitura.sp.gov.br</strong>.</p>
+
+                <p class="contact">Adote um pet e transforme uma vida!</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="./script.js"></script>
+
+</body>
+
+</html>

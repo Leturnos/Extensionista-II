@@ -10,7 +10,8 @@
 }
 
 .card {
-    flex: 0 0 calc(50% - 10px); /* Mostra dois cards por vez com um gap de 10px *//*
+    flex: 0 0 calc(50% - 10px); /* Mostra dois cards por vez com um gap de 10px */
+/*
     margin: 5px;
     box-sizing: border-box;
 }
@@ -38,7 +39,8 @@
 
 @media (max-width: 600px) {
     .card {
-        flex: 0 0 calc(100% - 15px); /* Exibe apenas um card por vez em telas pequenas *//*
+        flex: 0 0 calc(100% - 15px); /* Exibe apenas um card por vez em telas pequenas */
+/*
     }
 }
 */
@@ -51,13 +53,15 @@
 
 .carousel {
     display: flex;
-    transition: transform 0.5s ease-in-out;
+    transition: transform 0.9s ease-in-out;
 }
 
 .card {
-    flex: 0 0 calc(50% - 20px); /* Mostra dois cards por vez com um gap de 20px */
-    margin: 10px; /* Ajuste a margem conforme necessário */
-   /*padding: 10px; /* Ajuste o padding conforme necessário */
+    flex: 0 0 calc(50% - 20px);
+    /* Mostra dois cards por vez com um gap de 20px */
+    margin: 10px;
+    /* Ajuste a margem conforme necessário */
+    /*padding: 10px; /* Ajuste o padding conforme necessário */
     box-sizing: border-box;
     background-color: #fff;
     border: 1px solid #ddd;
@@ -71,7 +75,8 @@
 
 .card img {
     max-width: 100%;
-    height: 400px; /* Ajuste a altura conforme necessário */
+    height: 400px;
+    /* Ajuste a altura conforme necessário */
     object-fit: cover;
     border-radius: 5px;
 }
@@ -108,9 +113,11 @@
 
 @media (max-width: 600px) {
     .card {
-        flex: 0 0 calc(100% - 20px); /* Exibe apenas um card por vez em telas pequenas */
-        margin: 10px; /* Ajuste a margem conforme necessário */
-        padding: 10px; /* Ajuste o padding conforme necessário */
+        flex: 0 0 calc(100% - 20px);
+        /* Exibe apenas um card por vez em telas pequenas */
+        margin: 10px;
+        /* Ajuste a margem conforme necessário */
+        padding: 10px;
+        /* Ajuste o padding conforme necessário */
     }
 }
-    

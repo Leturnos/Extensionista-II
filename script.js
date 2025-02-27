@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const description = this.getAttribute('data-description');
 
             modalTitle.textContent = title;
-            modalDescription.textContent = description;
+            modalDescription.innerHTML = description;
 
             // Exibe o modal e adiciona a classe para animação
             modal.style.display = 'flex';

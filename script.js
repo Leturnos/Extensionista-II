@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const cardWidth = document.querySelector('.card').offsetWidth;
         const isMobile = window.innerWidth < 600;
         const cardsPerView = isMobile ? 1 : 2;
-        const offset = -currentIndex * (cardWidth * cardsPerView + 18 * (cardsPerView - 1)); // 18px de gap
+        const offset = -currentIndex * (cardWidth * cardsPerView + 39 * (cardsPerView - 1)); // 40px de gap
         carousel.style.transform = `translateX(${offset}px)`;
         dots.forEach((dot, index) => {
             dot.classList.toggle('active', index === currentIndex);
@@ -188,8 +188,8 @@ function changeText() {
         // Atualiza o índice para o próximo texto
         index = (index + 1) % textos.length;
 
-        const baseTime = 6000; // Tempo mínimo de 5 segundos
-        const charMultiplier = 30; // Tempo extra por caractere
+        const baseTime = 5000; // Tempo mínimo de 5 segundos
+        const charMultiplier = 40; // Tempo extra por caractere
         const newInterval = baseTime + (textos[index].paragrafo.length * charMultiplier);
 
         // Chama a próxima mudança de texto com o tempo ajustado

@@ -118,6 +118,7 @@ p {
     /* Ajustei o tamanho da imagem, mas ainda nao sei qual tamanho fica melhor*/
     object-fit: cover;
     /* é pra img cobrir todo o card */
+    object-position: 50% 25%;
     border-radius: 5px;
 }
 
@@ -151,4 +152,3 @@ p {
         /* Ocupa 100% da largura */
     }
 }
-

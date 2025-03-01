@@ -9,6 +9,15 @@
     margin: 0 0 15px 0;
 }
 
+.grid-layout { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1vh 4vw;
+    gap: 4vw;
+    margin-top: 6vh;
+}
+
 .container-text {
     /* Efeito  do texto aparecendo*/
     visibility: hidden;
@@ -140,6 +149,13 @@ p {
 
 /* Responsividade */
 @media (max-width: 900px) {
+    .grid-layout{
+        gap: 10vw;
+    }
+    .container-text {
+        max-width: 60%;
+    }
+
     .portfolio-item {
         flex: 1 1 calc(50% - 20px);
         /* Ocupa 50% da largura com margem */
@@ -147,6 +163,18 @@ p {
 }
 
 @media (max-width: 600px) {
+    .container-text {
+        max-width: 90%;
+    }
+
+    .container-text::before {
+        display: none;
+    }
+
+    .container-text::after {
+        display: none;
+    }
+
     .portfolio-item {
         flex: 1 1 calc(100% - 20px);
         /* Ocupa 100% da largura */

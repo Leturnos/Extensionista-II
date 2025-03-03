@@ -17,7 +17,7 @@ body {
 .overlay {
     position: fixed;
     top: 0;
-    left: 0;
+    right: 0;
     width: 100%;
     height: 100%;
     background-color: var(--overlay-bg-color);
@@ -32,12 +32,12 @@ body {
 .sidebar-menu {
     position: fixed;
     top: 0;
-    left: 0;
+    right: 0;
     height: 100%;
     width: 25vw;
     min-width: 300px;
     background-color: rgba(255, 254, 254, 0.8);
-    transform: translateX(-100%);
+    transform: translateX(100%);
     transition: transform 0.3s ease-in-out;
     z-index: 1000;
     padding: 20px;

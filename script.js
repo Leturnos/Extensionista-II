@@ -161,7 +161,7 @@ const textos = [
         Caso perceba algum desses sintomas, procure um veterinário o quanto antes!"
     },
     {
-        titulo: "Bem-vindo ao PetCenter",
+        titulo: "Bem-vindo à Central Late&Mia",
         paragrafo: "Aqui você encontra informações sobre castração, vacinação e adoção de pets.\
         Nosso objetivo é ajudar você a cuidar melhor do seu amigo!"
     }

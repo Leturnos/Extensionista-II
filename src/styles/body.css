@@ -3,6 +3,17 @@ body {
     background-color: var(--white-color);
 }
 
+.card ,
+.header__container a{
+    text-decoration: none;
+    color: unset;
+}
+
+.portfolio-item a {
+    text-decoration: underline;
+    color: blue;
+}
+
 .overlay {
     position: fixed;
     top: 0;
@@ -117,7 +128,8 @@ body {
 }
 
 .modal {
-    display: none; /* Oculto inicialmente */
+    display: none;
+    /* Oculto inicialmente */
     position: fixed;
     top: 0;
     left: 0;

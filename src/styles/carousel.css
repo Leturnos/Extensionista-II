@@ -50,6 +50,8 @@
 .card p {
     font-size: 1em;
     color: #666;
+    text-decoration: none;
+    color: unset;
 }
 
 .carousel-indicators {

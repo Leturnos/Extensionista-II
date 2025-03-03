@@ -13,7 +13,7 @@ overlay.addEventListener('click', () => {
     overlay.classList.remove('active');
 });
 
-// automação do  carousel
+// automação do  carousel de notícias
 
 document.addEventListener('DOMContentLoaded', function () {
     const carousel = document.getElementById('news-carousel');
@@ -23,20 +23,29 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function updateCarousel() {
         const cardWidth = document.querySelector('.card').offsetWidth;
-        const isMobile = window.innerWidth < 600;
+        const isMobile = window.innerWidth <= 600;
         const cardsPerView = isMobile ? 1 : 2;
-        const offset = -currentIndex * (cardWidth * cardsPerView + 39 * (cardsPerView - 1)); // 40px de gap
+        const gap = 25;
+        const offset = -currentIndex * (cardWidth + gap) * cardsPerView;
         carousel.style.transform = `translateX(${offset}px)`;
+
         dots.forEach((dot, index) => {
             dot.classList.toggle('active', index === currentIndex);
+        });
+
+        const totalDots = isMobile ? 6 : 3;
+        dots.forEach((dot, index) => {
+            dot.style.display = index < totalDots ? 'inline-block' : 'none';
         });
     }
 
     function startAutoSlide() {
         interval = setInterval(() => {
-            currentIndex = (currentIndex + 1) % dots.length;
+            const isMobile = window.innerWidth <= 600;
+            const totalDots = isMobile ? 6 : 3;
+            currentIndex = (currentIndex + 1) % totalDots;
             updateCarousel();
-        }, 5000); // 5 segundos
+        }, 5000);
     }
 
     function stopAutoSlide() {
@@ -57,6 +66,8 @@ document.addEventListener('DOMContentLoaded', function () {
     updateCarousel();
     startAutoSlide();
 });
+
+// Modal de portfólio
 
 document.addEventListener('DOMContentLoaded', function () {
     const modal = document.querySelector('.modal');

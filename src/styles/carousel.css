@@ -6,13 +6,13 @@
 
 .carousel {
     display: flex;
-    transition: transform 0.9s ease-in-out;
+    transition: transform 0.5s ease-in-out;
+    gap: 25px; /* Espaçamento entre os cards */
+    padding: 0 10px; /* Padding nas laterais */
 }
 
 .card {
-    flex: 0 0 calc(50% - 20px);
-    /* Mostra dois cards por vez com um gap de 20px */
-    margin: 10px;
+    flex: 0 0 calc(100% - 20px); /* Largura do card em telas pequenas */
     box-sizing: border-box;
     background-color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
@@ -24,6 +24,7 @@
     position: relative;
     z-index: 1;
     overflow: hidden;
+    margin: 0 auto; /* Centraliza o card */
 }
 
 .card:hover {
@@ -33,9 +34,8 @@
 
 .card img {
     width: 100%;
-    height: 400px;
-    max-height: 40vh;
-    /* object-fit: cover; */
+    height: 400px; /* Ajuste a altura conforme necessário */
+    object-fit: cover;
     border-radius: 5px;
 }
 
@@ -74,7 +74,8 @@
     background-color: var(--dot-active-color);
 }
 
-@media (max-width: 900px){
+
+@media (max-width: 900px) {
     .card img {
         height: 300px;
     }
@@ -82,9 +83,34 @@
 
 @media (max-width: 600px) {
     .card {
-        flex: 0 0 calc(100% - 20px);
-        /* Exibe apenas um card por vez em telas pequenas */
-        margin: 10px;
-        padding: 10px;       
+        flex: 0 0 calc(100% - 20px); /* Exibe apenas um card por vez em telas pequenas */
+        margin: 10px auto;
+        padding: 10px;
+    }
+    
+}
+
+@media (max-width: 390px) {
+    .card {
+        flex: 0 0 calc(100% - 20px); /* Exibe apenas um card por vez em telas muito pequenas */
+        margin: 10px auto; /* Centraliza o card */
+    }
+    
+}
+
+
+
+@media (max-width: 600px) {
+    .carousel-indicators .dot {
+        display: inline-block; /* Mostra todos os dots em telas pequenas */
+    }
+}
+
+@media (min-width: 601px) {
+    .carousel-indicators .dot:nth-child(n+4) {
+        display: none; /* Esconde os dots extras em telas maiores */
+    }
+    .card {
+        flex: 0 0 calc(50% - 20px);
     }
 }

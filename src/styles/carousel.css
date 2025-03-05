@@ -24,7 +24,7 @@
     position: relative;
     z-index: 1;
     overflow: hidden;
-    margin: 0 auto; /* Centraliza o card */
+    margin: 0 auto; /* Portaliza o card */
 }
 
 .card:hover {
@@ -94,7 +94,7 @@
 @media (max-width: 390px) {
     .card {
         flex: 0 0 calc(100% - 20px); /* Exibe apenas um card por vez em telas muito pequenas */
-        margin: 10px auto; /* Centraliza o card */
+        margin: 10px auto; /* Portaliza o card */
     }
     
 }

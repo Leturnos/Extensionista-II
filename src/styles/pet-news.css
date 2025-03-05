@@ -34,6 +34,12 @@
     hyphens: auto;
 }
 
+.content-container h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
 .content-container h2 {
     font-size: 2rem;
     color: #333;
@@ -53,6 +59,23 @@
     margin-top: 20px;
     font-size: 0.9em;
     color: #555;
+}
+
+table {
+    width: 100%;
+    margin: 20px;
+    border-collapse: separate;
+    border-spacing: 0 20px; /* espaçamento entre os blocos de tbody */
+    table-layout: fixed; /* Mantém as colunas alinhadas */
+}
+
+thead {
+    text-align: center;
+}
+
+th, td {
+    text-align: center; /* Alinha o conteúdo */
+    padding: 10px;
 }
 
 /* Responsividade para telas pequenas */

@@ -45,7 +45,7 @@
 }
 
 .content-text h2,
-p {
+.content-text p {
     font-family: Arial, sans-serif;
     padding: 0.5vh;
     opacity: 1;
@@ -187,17 +187,21 @@ p {
         display: none;
     }
 
+    .title_portfolio{
+        margin: 10px 5vw;
+    }
+
     .portfolio-item {
         flex: 1 1 calc(100% - 20px);
         /* Ocupa 100% da largura */
     }
 }
 
-@media (max-width: 460px) {
-    .news-title,
-    .title_portfolio{
+@media (max-width: 500px) {
+    .news-title {
         margin: 10px 5vw;
     }
+    
     #portfolio {
         padding: 10px;
     }
